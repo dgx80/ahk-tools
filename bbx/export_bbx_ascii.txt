@@ -1,0 +1,8 @@
+pour le moment j<export tout les fichier dans src 
+
+/usr/bbx3/pro5lst -d/u2/pgm/src .
+delete src/2cmp
+delete src/@cmp
+
+rename toute avec extention
+find . -type f -exec mv '{}' '{}'.bbx \;

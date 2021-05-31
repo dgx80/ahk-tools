@@ -1,0 +1,42 @@
+<html>
+<head>
+	<script src="psy_lib.js"></script>
+</head>
+<body>
+
+<h1>Postman buddy</h1>
+
+Copie toute ta shit dans la boite icitte.<br>
+
+<textarea id="_textid" style="width: 400px; height: 150px;" ></textarea>
+<br>
+<label for="debug_checkbox" >Debug me!</label>
+<input type="checkbox" name="debug_checkbox" id="debug_checkbox" checked>
+<label>API call</label>
+<input type="checkbox" name="apicall_checkbox" id="apicall_checkbox">
+<input type="button" value="Run that shit" onclick="runThatShit(); return false;" />
+
+<script>
+responseBody = '';
+tests = [];
+
+function runThatShit() 
+{
+	var debugThatShit = document.getElementById("debug_checkbox").checked,
+	    apiCall = document.getElementById("apicall_checkbox").checked,
+	    strVar = document.getElementById("_textid").value;
+		
+	if (apiCall) {
+		oResponse = JSON.parse(strVar);
+	}
+
+    if (debugThatShit) {
+		debugger;
+	}
+	
+	validateAppointmentReassignPost('JP Hood King', 'Bill Guerin', '819 555-4444', 'jean-pierre@progi.com', 'G8W0B5', 'Smart','Promutuel of fjord Branche', '2015-01-30 10:00:00');
+}
+</script>
+
+</body>
+</html>
